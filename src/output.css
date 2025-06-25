@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-fuchsia-50: oklch(97.7% 0.017 320.058);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: #000;
     --color-white: #fff;
@@ -205,14 +206,8 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .mt-16 {
-    margin-top: calc(var(--spacing) * 16);
-  }
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
-  }
-  .mr-8 {
-    margin-right: calc(var(--spacing) * 8);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -225,6 +220,9 @@
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-15 {
+    margin-bottom: calc(var(--spacing) * 15);
   }
   .mb-16 {
     margin-bottom: calc(var(--spacing) * 16);
@@ -295,8 +293,14 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
+  .max-w-\[276px\] {
+    max-width: 276px;
+  }
   .max-w-\[330px\] {
     max-width: 330px;
+  }
+  .max-w-\[1412px\] {
+    max-width: 1412px;
   }
   .max-w-full {
     max-width: 100%;
@@ -321,6 +325,9 @@
   }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -361,9 +368,6 @@
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -383,10 +387,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -396,9 +396,6 @@
   }
   .border-\[\#E2E8F0\] {
     border-color: #E2E8F0;
-  }
-  .border-\[slate\/200\] {
-    border-color: slate/200;
   }
   .border-b-blue-600 {
     border-bottom-color: var(--color-blue-600);
@@ -424,8 +421,14 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
@@ -445,6 +448,9 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
@@ -453,6 +459,9 @@
   }
   .py-\[26px\] {
     padding-block: 26px;
+  }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
@@ -468,6 +477,9 @@
   }
   .pb-40 {
     padding-bottom: calc(var(--spacing) * 40);
+  }
+  .text-center {
+    text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -515,6 +527,9 @@
   }
   .text-\[\#0F172A\] {
     color: #0F172A;
+  }
+  .text-\[\#334155\] {
+    color: #334155;
   }
   .text-black {
     color: var(--color-black);
@@ -627,6 +642,11 @@
       width: 261px;
     }
   }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .sm\:text-4xl {
     @media (width >= 40rem) {
       font-size: var(--text-4xl);
@@ -673,6 +693,11 @@
       width: calc(var(--spacing) * 36);
     }
   }
+  .md\:max-w-\[276px\] {
+    @media (width >= 48rem) {
+      max-width: 276px;
+    }
+  }
   .md\:max-w-\[588px\] {
     @media (width >= 48rem) {
       max-width: 588px;
@@ -686,6 +711,11 @@
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-3 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .md\:flex-row {
@@ -789,6 +819,11 @@
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-4 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .lg\:gap-4 {
